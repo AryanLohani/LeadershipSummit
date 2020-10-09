@@ -304,7 +304,7 @@
         });
         $(document).ready(function () {
                 if ($(window).width() <= 900) {
-                    gsap.from('#img-1,#img-3,#img-5', {
+                    gsap.from('#img-1', {
                         scrollTrigger: {
                             trigger: '#img-1',
                             toggleActions: "play none none none"
@@ -313,7 +313,43 @@
                         duration: 2,
                         x: -300
                     });
-                    gsap.from('#img-2,#img-4,#img-6', {
+                    gsap.from('#img-2,', {
+                        scrollTrigger: {
+                            trigger: '#img-2',
+                            toggleActions: "play none none none"
+                        },
+                        opacity: 0,
+                        duration: 2,
+                        x: +300
+                    });
+                    gsap.from('#img-3', {
+                        scrollTrigger: {
+                            trigger: '#img-1',
+                            toggleActions: "play none none none"
+                        },
+                        opacity: 0,
+                        duration: 2,
+                        x: -300
+                    });
+                    gsap.from('#img-4,', {
+                        scrollTrigger: {
+                            trigger: '#img-2',
+                            toggleActions: "play none none none"
+                        },
+                        opacity: 0,
+                        duration: 2,
+                        x: +300
+                    });
+                    gsap.from('#img-5', {
+                        scrollTrigger: {
+                            trigger: '#img-1',
+                            toggleActions: "play none none none"
+                        },
+                        opacity: 0,
+                        duration: 2,
+                        x: -300
+                    });
+                    gsap.from('#img-6,', {
                         scrollTrigger: {
                             trigger: '#img-2',
                             toggleActions: "play none none none"
