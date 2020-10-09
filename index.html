@@ -19,9 +19,8 @@
         @media only screen and (max-width:600px) {
             .main-heading {
                 height: 100vh;
-                font-size: 4.5rem;
+                font-size: 3.5rem;
                 color: whitesmoke;
-                margin: auto;
             }
 
             .speaker-heading {
@@ -33,12 +32,6 @@
                 font-size: 3.5rem;
                 min-height: 50vh;
                 color: whitesmoke;
-            }
-            .img-box{
-                border: 2px outset white;
-            height: 90%;
-            width: 90%;
-            object-fit: cover;
             }
         }
 
@@ -60,15 +53,16 @@
                 min-height: 50vh;
                 color: whitesmoke;
             }
-            .img-box{
-                border: 2px outset white;
-            height: 600px;
-            width: 600px;
-            object-fit: cover;
-            }
         }
 
-
+        .img-box {
+            border: 2px outset white;
+            height: 70vh;
+            width: 90%;
+            max-height: 600px;
+            max-width: 600px;
+            object-fit: cover;
+        }
 
         .content {
             min-height: 50vh;
@@ -128,9 +122,8 @@
         .background3 {
             background-color: #5341b5;
         }
-
     </style>
-    
+
 </head>
 
 <body>
@@ -186,7 +179,7 @@
         <div class="container-fluid" style="max-width: 1400px;">
             <div class="row">
                 <div class="col-xs-12 col-md-6 ">
-                    <div class="row heading px-5">
+                    <div class="row heading px-md-5">
                         <div class="col align-self-center">Leadership<br /> Summit</div>
                     </div>
                     <div class="row h4 content px-3">
@@ -212,7 +205,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12 px-5 py-5 card">
+                <div class="col-md-4 col-sm-6 col-xs-12 px-md-5 py-5 card" id="img-1">
                     <img src="imgs\arjunmalhotra.jpg" class="card-img">
                     <div class="card-title">
                         <p>Arjun Malhotra</p>
@@ -220,7 +213,7 @@
                         <a href="#"><img src="imgs\linkedin-logo.png" class="logo"></a>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 px-5 py-5 card">
+                <div class="col-md-4 col-sm-6 col-xs-12 px-md-5 py-5 card" id="img-2">
                     <img src="imgs\anjanraichaudhuri.jpg" class="card-img">
                     <div class="card-title">
                         <p>Anjanrai Chaudhuri</p>
@@ -228,7 +221,7 @@
                         <a href="#"><img src="imgs\linkedin-logo.png" class="logo"></a>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 px-5 py-5 card">
+                <div class="col-md-4 col-sm-6 col-xs-12 px-md-5 py-5 card" id="img-3">
                     <img src="imgs\arunabhkumar.jpg" class="card-img">
                     <div class="card-title">
                         <p>Arunabh Kumar</p>
@@ -236,7 +229,7 @@
                         <a href="#"><img src="imgs\linkedin-logo.png" class="logo"></a>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 px-5 py-5 card">
+                <div class="col-md-4 col-sm-6 col-xs-12 px-md-5 py-5 card" id="img-4">
                     <img src="imgs\gopalrajgarhia.jpg" class="card-img">
                     <div class="card-title">
                         <p>Gopalraj Garhia</p>
@@ -244,7 +237,7 @@
                         <a href="#"><img src="imgs\linkedin-logo.png" class="logo"></a>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 px-5 py-5 card">
+                <div class="col-md-4 col-sm-6 col-xs-12 px-md-5 py-5 card" id="img-5">
                     <img src="imgs\prasadrmenon.jpg" class="card-img">
                     <div class="card-title">
                         <p>Prasad Menon</p>
@@ -252,7 +245,7 @@
                         <a href="#"><img src="imgs\linkedin-logo.png" class="logo"></a>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 px-5 py-5 card">
+                <div class="col-md-4 col-sm-6 col-xs-12 px-md-5 py-5 card" id="img-6">
                     <img src="imgs\sakyasinharoy.jpg" class="card-img">
                     <div class="card-title">
                         <p>Sakyasinha Roy</p>
@@ -263,7 +256,7 @@
             </div>
         </div>
     </div>
-    
+
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -277,6 +270,99 @@
         crossorigin="anonymous"></script>
     <!-- Optional JavaScript -->
     <script src="navbar.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+    <script>
+        //   gsap.from('header', {opacity:0, duration:2, y:-50 })
+        gsap.from('.main-heading', { opacity: 0, duration: 2, x: -1000 })
+        gsap.from('.heading', {
+            scrollTrigger: {
+                trigger: '.heading',
+                toggleActions: "play none none none"
+            },
+            opacity: 0,
+            duration: 2,
+            x: +1000
+        });
+        gsap.from('.content', {
+            scrollTrigger: {
+                trigger: '.heading',
+                toggleActions: "play none none none"
+            },
+            opacity: 0,
+            duration: 2,
+            x: -400
+        });
+        gsap.from('.img-box', {
+            scrollTrigger: {
+                trigger: '.heading',
+                toggleActions: "play none none none"
+            },
+            opacity: 0,
+            duration: 2,
+            x: -1000
+        });
+        $(document).ready(function () {
+                if ($(window).width() <= 900) {
+                    gsap.from('#img-1,#img-3,#img-5', {
+                        scrollTrigger: {
+                            trigger: '#img-1',
+                            toggleActions: "play none none none"
+                        },
+                        opacity: 0,
+                        duration: 2,
+                        x: -300
+                    });
+                    gsap.from('#img-2,#img-4,#img-6', {
+                        scrollTrigger: {
+                            trigger: '#img-2',
+                            toggleActions: "play none none none"
+                        },
+                        opacity: 0,
+                        duration: 2,
+                        x: +300
+                    });
+                }
+                else {
+                    gsap.from('#img-1,#img-4', {
+                        scrollTrigger: {
+                            trigger: '#img-1',
+                            toggleActions: "play none none none"
+                        },
+                        opacity: 0,
+                        duration: 2,
+                        x: -300
+                    });
+                    gsap.from('#img-2',{
+                        scrollTrigger: {
+                            trigger: '#img-2',
+                            toggleActions: "play none none none"
+                        },
+                        opacity: 0,
+                        duration: 2,
+                        y: -300
+                    })
+                    gsap.from('#img-5',{
+                        scrollTrigger: {
+                            trigger: '#img-5',
+                            toggleActions: "play none none none"
+                        },
+                        opacity: 0,
+                        duration: 2,
+                        y: +300
+                    })
+                    gsap.from('#img-3,#img-6', {
+                        scrollTrigger: {
+                            trigger: '#img-3',
+                            toggleActions: "play none none none"
+                        },
+                        opacity: 0,
+                        duration: 2,
+                        x: +300
+                    });
+                }
+            })
+    </script>
 </body>
 
 </html>
