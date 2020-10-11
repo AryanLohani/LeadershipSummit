@@ -16,7 +16,7 @@
     <title>Hello, world!</title>
 
     <style>
-        @media only screen and (max-width:600px) {
+        @media only screen and (max-width:768px) {
             .main-heading {
                 height: 100vh;
                 font-size: 3.5rem;
@@ -30,12 +30,40 @@
 
             .heading {
                 font-size: 3.5rem;
-                min-height: 50vh;
                 color: whitesmoke;
+            }
+
+            .card {
+                box-shadow: 10px 10px 5px #433675;
+                background-color: #422bc4;
+            }
+
+            .card-title {
+                width: 100%;
+                text-align: center;
+                font-size: 1.5em;
+                color: white;
+                height: 2.4rem;
+            }
+
+            .card-img {
+                border: 2px outset white;
+                height: 300px;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .img-box {
+                box-shadow: 10px 10px 5px #7a3535;
+                margin: auto;
+                width: 90%;
+                height: 70vh;
+                border: 1px outset white;
+                object-fit: cover;
             }
         }
 
-        @media only screen and (min-width:600px) {
+        @media only screen and (min-width:768px) {
             .main-heading {
                 margin: auto;
                 height: 100vh;
@@ -53,62 +81,65 @@
                 min-height: 50vh;
                 color: whitesmoke;
             }
+
+            .card {
+                box-shadow: 10px 10px 5px #433675;
+                border-radius: 10px;
+                background-color: #ac9efa;
+                position: relative;
+            }
+
+            .card-title {
+                border-radius: 10px;
+                opacity: 0;
+                height: 300px;
+                width: 100%;
+                text-align: center;
+                background-color: gray;
+                position: absolute;
+                font-size: 1.5em;
+                color: white;
+            }
+
+            .card-title p {
+                margin-top: 100px;
+            }
+
+            .card:hover .card-title {
+                opacity: 0.5;
+            }
+
+            .card:hover .card-img {
+                opacity: 0.2;
+            }
+
+            .logo {
+                height: 40px;
+                width: 40px;
+            }
+
+            .card-img {
+                border: 1px outset rgb(48, 36, 223);
+                border-radius: 10px;
+                height: 300px;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .img-box {
+                box-shadow: 10px 10px 5px #7a3535;
+                border: 2px outset white;
+                height: 80vh;
+                width: 90%;
+                object-fit: cover;
+            }
         }
 
-        .img-box {
-            border: 2px outset white;
-            height: 70vh;
-            width: 90%;
-            max-height: 600px;
-            max-width: 600px;
-            object-fit: cover;
-        }
 
         .content {
             min-height: 50vh;
             line-height: 3rem;
             color: whitesmoke;
-        }
-
-        .card {
-            background-color: #5341b5;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card-img {
-            border: 2px outset white;
-            height: 300px;
-            width: 300px;
-            object-fit: cover;
-        }
-
-        .card-title {
-            opacity: 0;
-            height: 300px;
-            width: 300px;
-            text-align: center;
-            background-color: gray;
-            position: absolute;
-            font-size: 1.5em;
-            color: white;
-        }
-
-        .card-title p {
-            margin-top: 100px;
-        }
-
-        .card:hover .card-title {
-            opacity: 0.5;
-        }
-
-        .card:hover .card-img {
-            opacity: 0.2;
-        }
-
-        .logo {
-            height: 40px;
-            width: 40px;
         }
 
         .background1 {
@@ -164,98 +195,118 @@
     </nav>
 
     <!--Heading-->
-    <div class="container-fluid background1">
-        <div class="container-fluid" style="max-width: 1400px;">
-            <div class="row  main-heading">
-                <div class="col-sm-6 col-xs-12 align-self-center">
-                    Leadership Summit
+    <section>
+        <div class="container-fluid background1">
+            <div class="container-fluid" style="max-width: 1400px;">
+                <div class="row  main-heading">
+                    <div class="col-sm-6 col-xs-12 align-self-center">
+                        Leadership Summit
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!--Content-->
-    <div class="container-fluid background2">
-        <div class="container-fluid" style="max-width: 1400px;">
-            <div class="row">
-                <div class="col-xs-12 col-md-6 ">
-                    <div class="row heading px-md-5">
-                        <div class="col align-self-center">Leadership<br /> Summit</div>
+    <section>
+        <div class="container-fluid background2">
+            <div class="container-fluid" style="max-width: 1400px;">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 ">
+                        <div class="row heading py-2">
+                            <div class="col align-self-center">Leadership<br /> Summit</div>
+                        </div>
+                        <div class="row h4 content py-2">
+                            <div class="col">
+                            Leadership Summit, organized as a part of Guest Lectures, sees the participation of
+                            professionals and corporate tycoons
+                            sharing the same stage talking about their experiences and guiding the students to become
+                            future
+                            world leaders.
+                            </div>
+                        </div>
                     </div>
-                    <div class="row h4 content px-3">
-                        Leadership Summit, organized as a part of Guest Lectures, sees the participation of
-                        professionals and corporate tycoons
-                        sharing the same stage talking about their experiences and guiding the students to become future
-                        world leaders.
+                    <div class="col-xs-12 col-md-6 align-self-center py-4">
+                        <img src="imgs\Speaker.jpg" class="img-box">
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 align-self-center py-4">
-                    <img src="imgs\Speaker.jpg" class="img-box">
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!--Speakers-->
-    <div class="container-fluid background3">
-        <div class="container-fluid " style="max-width: 1400px;">
-            <div class="row justify-content-center">
-                <div class="col-xs-12 display-2 speaker-heading">
-                    Past Speakers
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12 px-md-5 py-5 card" id="img-1">
-                    <img src="imgs\arjunmalhotra.jpg" class="card-img">
-                    <div class="card-title">
-                        <p>Arjun Malhotra</p>
-                        <br />
-                        <a href="#"><img src="imgs\linkedin-logo.png" class="logo"></a>
+    <section>
+        <div class="container-fluid background3">
+            <div class="container-fluid " style="max-width: 1400px;">
+                <div class="row justify-content-center">
+                    <div class="col-xs-12 display-2 speaker-heading">
+                        Past Speakers
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 px-md-5 py-5 card" id="img-2">
-                    <img src="imgs\anjanraichaudhuri.jpg" class="card-img">
-                    <div class="card-title">
-                        <p>Anjanrai Chaudhuri</p>
-                        <br />
-                        <a href="#"><img src="imgs\linkedin-logo.png" class="logo"></a>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12 px-md-5 px-4 py-md-5 py-4">
+                        <div class="card">
+                            <img src="imgs\arjunmalhotra.jpg" class="card-img">
+                            <div class="card-title">
+                                <p><a>Arjun Malhotra</a></p>
+                                <a href="#"><img src="imgs\linkedin-logo.png" class="logo"></a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 px-md-5 py-5 card" id="img-3">
-                    <img src="imgs\arunabhkumar.jpg" class="card-img">
-                    <div class="card-title">
-                        <p>Arunabh Kumar</p>
-                        <br />
-                        <a href="#"><img src="imgs\linkedin-logo.png" class="logo"></a>
+                    <div class="col-md-4 col-sm-6 col-xs-12 px-md-5 px-4 py-md-5 py-4">
+                        <div class="card">
+                            <img src="imgs\anjanraichaudhuri.jpg" class="card-img">
+                            <div class="card-title">
+                                <p><a>Anjanrai Chaudhuri</a></p>
+                                <br />
+                                <a href="#"><img src="imgs\linkedin-logo.png" class="logo"></a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 px-md-5 py-5 card" id="img-4">
-                    <img src="imgs\gopalrajgarhia.jpg" class="card-img">
-                    <div class="card-title">
-                        <p>Gopalraj Garhia</p>
-                        <br />
-                        <a href="#"><img src="imgs\linkedin-logo.png" class="logo"></a>
+                    <div class="col-md-4 col-sm-6 col-xs-12 px-md-5 px-4 py-md-5 py-4">
+                        <div class="card">
+                            <img src="imgs\arunabhkumar.jpg" class="card-img">
+                            <div class="card-title">
+                                <p>Arunabh Kumar</p>
+                                <br />
+                                <a href="#"><img src="imgs\linkedin-logo.png" class="logo"></a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 px-md-5 py-5 card" id="img-5">
-                    <img src="imgs\prasadrmenon.jpg" class="card-img">
-                    <div class="card-title">
-                        <p>Prasad Menon</p>
-                        <br />
-                        <a href="#"><img src="imgs\linkedin-logo.png" class="logo"></a>
+                    <div class="col-md-4 col-sm-6 col-xs-12 px-md-5 px-4 py-md-5 py-4">
+                        <div class="card">
+                            <img src="imgs\gopalrajgarhia.jpg" class="card-img">
+                            <div class="card-title">
+                                <p>Gopalraj Garhia</p>
+                                <br />
+                                <a href="#"><img src="imgs\linkedin-logo.png" class="logo"></a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 px-md-5 py-5 card" id="img-6">
-                    <img src="imgs\sakyasinharoy.jpg" class="card-img">
-                    <div class="card-title">
-                        <p>Sakyasinha Roy</p>
-                        <br />
-                        <a href="#"><img src="imgs\linkedin-logo.png" class="logo"></a>
+                    <div class="col-md-4 col-sm-6 col-xs-12 px-md-5 px-4 py-md-5 py-4">
+                        <div class="card">
+                            <img src="imgs\prasadrmenon.jpg" class="card-img">
+                            <div class="card-title">
+                                <p>Prasad Menon</p>
+                                <br />
+                                <a href="#"><img src="imgs\linkedin-logo.png" class="logo"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12 px-md-5 px-4 py-md-5 py-4">
+                        <div class="card">
+                            <img src="imgs\sakyasinharoy.jpg" class="card-img">
+                            <div class="card-title">
+                                <p>Sakyasinha Roy</p>
+                                <br />
+                                <a href="#"><img src="imgs\linkedin-logo.png" class="logo"></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -302,102 +353,35 @@
             duration: 2,
             x: -1000
         });
-        $(document).ready(function () {
-                if ($(window).width() <= 900) {
-                    gsap.from('#img-1', {
-                        scrollTrigger: {
-                            trigger: '#img-1',
-                            toggleActions: "play none none none"
-                        },
-                        opacity: 0,
-                        duration: 2,
-                        x: -300
-                    });
-                    gsap.from('#img-2,', {
-                        scrollTrigger: {
-                            trigger: '#img-2',
-                            toggleActions: "play none none none"
-                        },
-                        opacity: 0,
-                        duration: 2,
-                        x: +300
-                    });
-                    gsap.from('#img-3', {
-                        scrollTrigger: {
-                            trigger: '#img-1',
-                            toggleActions: "play none none none"
-                        },
-                        opacity: 0,
-                        duration: 2,
-                        x: -300
-                    });
-                    gsap.from('#img-4,', {
-                        scrollTrigger: {
-                            trigger: '#img-2',
-                            toggleActions: "play none none none"
-                        },
-                        opacity: 0,
-                        duration: 2,
-                        x: +300
-                    });
-                    gsap.from('#img-5', {
-                        scrollTrigger: {
-                            trigger: '#img-1',
-                            toggleActions: "play none none none"
-                        },
-                        opacity: 0,
-                        duration: 2,
-                        x: -300
-                    });
-                    gsap.from('#img-6,', {
-                        scrollTrigger: {
-                            trigger: '#img-2',
-                            toggleActions: "play none none none"
-                        },
-                        opacity: 0,
-                        duration: 2,
-                        x: +300
-                    });
-                }
-                else {
-                    gsap.from('#img-1,#img-4', {
-                        scrollTrigger: {
-                            trigger: '#img-1',
-                            toggleActions: "play none none none"
-                        },
-                        opacity: 0,
-                        duration: 2,
-                        x: -300
-                    });
-                    gsap.from('#img-2',{
-                        scrollTrigger: {
-                            trigger: '#img-2',
-                            toggleActions: "play none none none"
-                        },
-                        opacity: 0,
-                        duration: 2,
-                        y: -300
-                    })
-                    gsap.from('#img-5',{
-                        scrollTrigger: {
-                            trigger: '#img-5',
-                            toggleActions: "play none none none"
-                        },
-                        opacity: 0,
-                        duration: 2,
-                        y: +300
-                    })
-                    gsap.from('#img-3,#img-6', {
-                        scrollTrigger: {
-                            trigger: '#img-3',
-                            toggleActions: "play none none none"
-                        },
-                        opacity: 0,
-                        duration: 2,
-                        x: +300
-                    });
-                }
-            })
+
+        var card = document.querySelectorAll('.card');
+        for (let i = 0; i < card.length; i++) {
+            gsap.from(card[i], {
+                scrollTrigger: {
+                    trigger: card[i],
+                    toggleActions: "play none none none"
+                },
+                opacity: 0,
+                duration: 2,
+                y: +200
+            });
+        }
+        if ($(window).width() <= 900) {
+            $(".logo").attr("src", "");
+        }
+        else {
+            $(".logo").attr("src", "imgs/linkedin-logo.png");
+        }
+
+        $(window).resize(function () {
+            if ($(window).width() <= 900) {
+                $(".logo").attr("src", "");
+            }
+            else {
+                $(".logo").attr("src", "imgs/linkedin-logo.png");
+            }
+        })
+
     </script>
 </body>
 
